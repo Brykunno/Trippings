@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit&family=Noto+Sans+Lao:wght@800&family=Open+Sans:wght@300&family=PT+Sans+Caption:wght@700&family=Press+Start+2P&family=Roboto+Slab&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: rgb(7, 7, 30);
+        }
+        h1{
+            color: white;
+        }
+        .ques{
+            display: grid;
+            place-items: center;
+            font-family: "kanit";
+
+            width: 100%;
+            height: 100%;
+
+
+        }
+        button{
+            position: absolute;
+            display:flex;
+            cursor:pointer;
+            margin:0 10px;
+
+            letter-spacing: 2px;
+            font-weight: bold;
+
+            font-size: 15px;
+            background-color:rgb(231, 255, 96);
+
+            border-radius: 5px;
+
+            
+        }
+        .yesbtn{
+            right: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="ques">
+        <h1 id="q">Tanga ka ba?</h1>
+    
+    <div class="buttons">
+        <button class="yesbtn" onclick="yesclicked()">YES</button>
+        <button class="nobtn">NO</button>
+    </div>
+    </div>
+    <script>
+        const b=document.querySelector('button.nobtn')
+        b.addEventListener("mouseover",moveHover)
+
+        function moveHover(){
+            const i=Math.floor(Math.random()*500)+1;
+            const j=Math.floor(Math.random()*500)+1;
+
+             b.style.left=i+"px"
+             b.style.top=j+"px"
+        }
+
+        function yesclicked(){
+            document.getElementById("q").innerHTML="BUTI ALAM MO!😜";
+        }
+    </script>
+</body>
+</html>
